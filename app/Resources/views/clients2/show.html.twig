@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Clients</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ clients2.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ clients2.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ clients2.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ clients2.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Codepostal</th>
+                <td>{{ clients2.codePostal }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ clients2.telephone }}</td>
+            </tr>
+            <tr>
+                <th>Mail</th>
+                <td>{{ clients2.mail }}</td>
+            </tr>
+            <tr>
+                <th>Categorie</th>
+                <td>{{ clients2.categorie }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('clients2_index') }}">Retour à la liste</a>
+        </li>
+        <li>
+            <a href="{{ path('clients2_edit', { 'id': clients2.id }) }}">Modifier Client</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Supprimer">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

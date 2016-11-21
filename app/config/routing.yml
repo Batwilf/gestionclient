@@ -1,0 +1,31 @@
+gc_user:
+    resource: "@GCUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+gc_facture_facture:
+    resource: "@GCFactureBundle/Controller/FactureController.php"
+    type:     annotation
+
+gc_facture_clients2:
+    resource: "@GCFactureBundle/Controller/Clients2Controller.php"
+    type:     annotation
+
+gc_facture:
+    resource: "@GCFactureBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+login:
+    path: /login
+    defaults:
+        _controller: GCUserBundle:Security:login
+
+login_check:
+    path: /login_check
+
+logout:
+    path: /logout

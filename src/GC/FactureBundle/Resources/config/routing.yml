@@ -1,0 +1,3 @@
+gc_facture_homepage:
+    path:     /
+    defaults: { _controller: GCFactureBundle:Default:index }
